@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/heima58
+    username: root
+    password: root
+  application:
+    name: user-service
+mybatis:
+  type-aliases-package: cn.itcast.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka/,http://localhost:10087/eureka/
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
